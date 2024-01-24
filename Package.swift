@@ -28,16 +28,16 @@ import PackageDescription
 let package = Package(
     name: "SnapKit",
     platforms: [
-        .iOS(.v12),
-        .macOS(.v10_13),
-        .tvOS(.v12)
+        .iOS(.v16),
+        .macOS(.v13),
+        .tvOS(.v16)
     ],
     products: [
         .library(name: "SnapKit", targets: ["SnapKit"]),
         .library(name: "SnapKit-Dynamic", type: .dynamic, targets: ["SnapKit"]),
     ],
     targets: [
-        .target(name: "SnapKit", path: "Sources", resources: [.copy("PrivacyInfo.xcprivacy")]),
+        .target(name: "SnapKit", path: "Sources"),
         .testTarget(name: "SnapKitTests", dependencies: ["SnapKit"]),
     ],
     swiftLanguageVersions: [
